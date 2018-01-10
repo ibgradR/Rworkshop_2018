@@ -39,7 +39,7 @@ eight <- mtcars %>% filter(cyl == 8) # select only rows where cyl = 8
 
 ## EXERCISE 5 ##
 # Run an ANOVA using the R diamonds dataset to test whether the color of a diamond affects its depth.
-library(ggplot2) # weirdly, diamonds is part of the ggplot2 library
+library(ggplot2) # weirdly, diamonds is part of the ggplot2 library; load here if you haven't yet!
 data('diamonds')
 
 
