@@ -43,7 +43,6 @@ list(
   ggplot(aes(x, y)) + geom_point(aes(fill = dataset), size = 3, pch = 21) + facet_wrap(~ dataset)
 
 ## EXERCISE 1 ##
-
 #Using the `iris` dataset:
   
 # Plot Sepal.Length and Sepal.Width.
@@ -66,7 +65,6 @@ inter.fit1 <- lm(mtcars$mpg ~ mtcars$wt + mtcars$hp + mtcars$wt:mtcars$hp)
 inter.fit2 <- lm(mtcars$mpg ~ mtcars$wt*mtcars$hp)
 
 ## EXERCISE 2 ##
-
 # Translate the following into a model: "`iris` sepal length is determined by all petal measurements, as well as the interaction 
 # between sepal length and petal length." 
 
