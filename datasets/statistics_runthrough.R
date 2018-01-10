@@ -53,6 +53,8 @@ list(
 ### Basic questions in statistics, model notation ###
 #---------------------------------------------------#
 
+hist(rnorm(1000)) # vs. runif (constant probability)
+
 data('mtcars') # load built-in dataset
 head(mtcars) # peek at first few rows of data
 
