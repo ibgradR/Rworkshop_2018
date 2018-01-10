@@ -42,7 +42,7 @@ list(
   bind_rows() %>%
   ggplot(aes(x, y)) + geom_point(aes(fill = dataset), size = 3, pch = 21) + facet_wrap(~ dataset)
 
-### Exercise 1: explore a classic dataset
+## EXERCISE 1 ##
 
 #Using the `iris` dataset:
   
@@ -65,7 +65,7 @@ inter.fit1 <- lm(mtcars$mpg ~ mtcars$wt + mtcars$hp + mtcars$wt:mtcars$hp)
 
 inter.fit2 <- lm(mtcars$mpg ~ mtcars$wt*mtcars$hp)
 
-### Exercise 2: build models from questions
+## EXERCISE 2 ##
 
 # Translate the following into a model: "`iris` sepal length is determined by all petal measurements, as well as the interaction 
 # between sepal length and petal length." 
@@ -97,6 +97,10 @@ t.test(vgood$price, premium$price, alternative = 'less', conf.level = 0.99) # te
 
 t.test(vgood$carat, premium$carat, alternative = 'less', conf.level = 0.99) # test whether carat measurements are significantly different
 
+## EXERCISE 3 ##
+# Run a one-sided, two sample t-test to determine whether 8-cylinder cars get significantly lower mpg than 6-cylinder cars. 
+# Make sure to take a look at your data to help you choose an appropriate alternative hypothesis.
+
 #---------------------------------------#
 ### Useful stats 2: linear regression ###
 #---------------------------------------#
@@ -106,6 +110,9 @@ lm.basic <- lm(mpg ~ wt, data = mtcars)
 summary(lm.basic)
 names(lm.basic) ## take a peek at the kinds of summary statistics that may be accessed
 summary(lm.basic)$coefficients
+
+## EXERCISE 4 ##
+# Let's go back to a familiar question: does the weight of a car affect its mpg? Run this linear model and extract the coefficients.
 
 #---------------------------#
 ### Useful stats 3: ANOVA ###
@@ -119,3 +126,6 @@ musicdf <- bind_rows(transmute(music, score = metal, genre = 'metal'), transmute
 
 simple.anova <- aov(score ~ genre, data = musicdf)
 summary(simple.anova)
+
+## EXERCISE 5 ##
+# Run an ANOVA using the R diamonds dataset to test whether the color of a diamond affects its depth.
